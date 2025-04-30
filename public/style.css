@@ -1,0 +1,324 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin : 20px;
+  background-color: black;
+  background-image: url("GLASS3.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+   height: 100vh;
+   image-resolution: high;
+   overflow:auto;
+}
+
+#editor-container {
+  margin-top: 10px;
+  border : 2px solid white;
+  height : 300px;
+  background-color:white;
+  border-color: #373042;
+  border-radius: 20px;
+  overflow: auto;
+  font-size: 25px;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+/*
+#output  
+{
+  margin-top:20px;
+  padding : 10px;
+  background-color: #eaeaea;
+  border : 1px solid #ccc;
+  border-radius: 20px;
+  overflow: auto;
+}*/
+#output {
+margin-top: 20px;
+color: rgb(255, 255, 255);
+padding: 10px;
+background-color: rgba(255, 255, 255, 0.1); /* Fully transparent with slight white tint */
+border: 2px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+border-radius: 20px;
+overflow: auto;
+-webkit-backdrop-filter: blur(10px); /* Glass effect for Chrome/Safari */
+backdrop-filter: blur(10px); /* Glass effect */
+box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2); /* Soft shadow */
+animation: glow 1.5s infinite alternate; /* Glow animation */
+font-weight:900;
+}
+
+/* Glowing border effect */
+@keyframes glow {
+0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 
+                0 0 10px rgba(255, 255, 255, 0.3);
+}
+100% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 
+                0 0 20px rgba(255, 255, 255, 0.7);
+}
+}
+
+#plain
+{
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+}
+
+/*
+button {
+  margin-top : 10px;
+  padding : 10px 20px;
+  background-color: #007bff;
+  color : white;
+  border : none;
+  cursor: pointer;
+  border: 1x solid #007bff;
+  border-radius: 10px;
+  margin-left:30px;
+}
+
+button:hover{
+  background-color: #0056b3;
+}
+
+*/
+
+#debug-btn,
+#debug-btn *,
+#debug-btn :after,
+#debug-btn :before,
+#debug-btn:after,
+#debug-btn:before {
+border: 0 solid;
+box-sizing: border-box;
+}
+
+#debug-btn {
+-webkit-tap-highlight-color: transparent;
+background-color: #000;
+background-image: none;
+color: #fff;
+cursor: pointer;
+font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+  Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+  Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+font-size: 100%;
+font-weight: 900;
+line-height: 1.5;
+margin-top: 10px;
+padding:10px 20px;
+margin-left: 30px;
+}
+
+#debug-btn:disabled {
+cursor: default;
+}
+
+#debug-btn:-moz-focusring {
+outline: auto;
+}
+
+#debug-btn svg {
+display: block;
+}
+
+#debug-btn [hidden] {
+display: none;
+}
+
+#debug-btn {
+background: none;
+border-radius: 999px;
+box-sizing: border-box;
+display: block;
+overflow: hidden;
+padding: 1.2rem 3rem;
+position: relative;
+text-transform: uppercase;
+}
+
+#debug-btn span {
+font-weight: 900;
+mix-blend-mode: difference;
+transition: opacity 0.2s;
+}
+
+#debug-btn:hover span {
+-webkit-animation: text-reset 0.2s 0.8s forwards;
+animation: text-reset 0.2s 0.8s forwards;
+opacity: 0;
+}
+
+#debug-btn:after,
+#debug-btn:before {
+border: 4px solid #fff;
+border-radius: 999px;
+content: "";
+height: 100%;
+left: 0;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+transition: height 0.2s;
+width: 100%;
+}
+
+#debug-btn:after {
+background: #fff;
+border: none;
+height: 2rem;
+width: 0;
+z-index: -1;
+}
+
+#debug-btn:hover:before {
+-webkit-animation: border-reset 0.2s linear 0.78s forwards;
+animation: border-reset 0.2s linear 0.78s forwards;
+height: 2rem;
+}
+
+#debug-btn:hover:after {
+-webkit-animation: progress-bar 1s;
+animation: progress-bar 1s;
+}
+
+@-webkit-keyframes progress-bar {
+0% {
+  opacity: 1;
+  width: 0;
+}
+10% {
+  opacity: 1;
+  width: 15%;
+}
+25% {
+  opacity: 1;
+  width: 25%;
+}
+40% {
+  opacity: 1;
+  width: 35%;
+}
+55% {
+  opacity: 1;
+  width: 75%;
+}
+60% {
+  opacity: 1;
+  width: 100%;
+}
+to {
+  opacity: 0;
+  width: 100%;
+}
+}
+
+@keyframes progress-bar {
+0% {
+  opacity: 1;
+  width: 0;
+}
+10% {
+  opacity: 1;
+  width: 15%;
+}
+25% {
+  opacity: 1;
+  width: 25%;
+}
+40% {
+  opacity: 1;
+  width: 35%;
+}
+55% {
+  opacity: 1;
+  width: 75%;
+}
+60% {
+  opacity: 1;
+  width: 100%;
+}
+to {
+  opacity: 0;
+  width: 100%;
+}
+}
+
+@-webkit-keyframes border-reset {
+0% {
+  height: 2rem !important;
+}
+to {
+  height: 100% !important;
+}
+}
+
+@keyframes border-reset {
+0% {
+  height: 2rem !important;
+}
+to {
+  height: 100% !important;
+}
+}
+
+@-webkit-keyframes text-reset {
+0% {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+@keyframes text-reset {
+0% {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+
+h1 {
+  color:#ffffff;
+  overflow: hidden; /* Ensures content is clipped as it types out */
+  white-space: nowrap; /* Prevents text wrapping */
+  border-right: 1px solid white; /* Simulates the typewriter cursor */
+  font-size: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  animation: typing 2s steps(30), blink 0.1s step-end infinite; /* Typing and blinking cursor */
+}
+
+@keyframes typing {
+  from {
+      width: 0%;
+  }
+  to {
+      width: 400px; /* Full width after typing */
+  }
+}
+
+@keyframes blink {
+  30% {
+      border-color: transparent; /* Blink effect: hide the cursor halfway */
+  }
+}
+
+
+.Made
+{
+  color: white;
+  font-size: larger;
+}
+#language{
+  color: rgb(0, 0, 0);
+  font-size: medium;
+}
+label
+{
+  color: white;
+  font-size: 18px;
+}
