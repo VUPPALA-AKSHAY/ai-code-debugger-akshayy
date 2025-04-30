@@ -59,14 +59,18 @@ app.listen(PORT, () => {
 // node server.js
   
  */
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const fetch = require("node-fetch");
 const path = require("path");
+const cors = require("cors");  // Import cors
 
 const app = express();
 
+// Enable CORS for all origins
+app.use(cors());  // This will allow all origins to make requests
+
+// Middleware
 app.use(bodyParser.json());
 app.use(express.static("public")); // serves index.html, script.js, etc.
 
