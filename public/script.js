@@ -69,7 +69,7 @@ document.getElementById('debug-btn').addEventListener('click', async () => {
 
   const apiUrl = window.location.hostname.includes("localhost")
     ? "http://localhost:8002/debug"
-    : "https://ai-code-debugger-akshayy-0189.onrender.com/debug";  // ✅ Updated here
+    : "https://ai-code-debugger-akshayy-189.onrender.com/debug";  // ✅ Updated here
 
   try {
     const response = await fetch(apiUrl, {
