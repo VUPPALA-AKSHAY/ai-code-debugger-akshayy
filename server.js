@@ -95,7 +95,7 @@ app.post("/debug", async (req, res) => {
         messages: [
           {
             role: "system",
-            content: `You are a professional debugging assistant specialized in ${language}. Explain the errors in the code.`,
+            content: `Explain the errors in the code and You are a professional debugging assistant specialized in ${language}.`,
           },
           {
             role: "user",
