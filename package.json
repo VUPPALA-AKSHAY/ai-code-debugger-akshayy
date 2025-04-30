@@ -2,7 +2,7 @@
   "name": "aicodedebugger",
   "version": "1.0.0",
   "description": "This is an AI code helper",
-  "main": "index.js",
+  "main": "server.js",  
   "homepage": "./",
   
   "scripts": {
