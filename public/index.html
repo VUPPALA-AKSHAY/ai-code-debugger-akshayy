@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,10 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/codemirror.min.css">
     
-<!-- I ADD THIS VS THEAM 
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/codemirror.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/theme/material-darker.min.css">
-I ADD THIS VS CODE  THEAM -->
+
 
 </head>  
 <body>
@@ -34,10 +35,81 @@ I ADD THIS VS CODE  THEAM -->
     <div id="plain">
         .
     </div>
+    <div id="lines-container"></div>
+    <div id="particles-js"></div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/codemirror.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/mode/javascript/javascript.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.9/mode/python/python.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.37.0/tsparticles.min.js"></script>
 <script src="script.js"></script>
+
+<!-- ADDED THIS -->
+<!-- Container for Particles Effect -->
+<div id="particles-js" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
+<script>
+    tsParticles.load("particles-js", {
+      particles: {
+        number: {
+          value: 140, // Number of particles
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "white" // Particle color (change as needed)
+        },
+        shape: {
+          type: "circle", // Particle shape (can be "circle", "edge", etc.)
+        },
+        opacity: {
+          value: 0.5, // Opacity of particles
+          anim: {
+            enable: true,
+            speed: 1,
+            opacity_min: 0.1
+          }
+        },
+        size: {
+          value: 3, // Size of particles
+          anim: {
+            enable: true,
+            speed: 20,
+            size_min: 0.1
+          }
+        },
+        links: {
+          enable: true, // Enable lines connecting particles
+          distance: 150, // Distance for the lines to appear
+          color: "#ffffff", // Line color
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 10,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: {
+            enable: true,
+            mode: "grab"
+          },
+          onclick: {
+            enable: true,
+            mode: "push"
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
+
