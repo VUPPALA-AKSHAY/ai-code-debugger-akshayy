@@ -91,7 +91,7 @@ app.post("/debug", async (req, res) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "llama3-70b-8192",
+        model: "llama-3.3-70b-versatile", // llama3-70b-8192  OLD MODEL
         messages: [
           {
             role: "system",
