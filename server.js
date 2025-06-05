@@ -74,7 +74,7 @@ app.use(cors());  // This will allow all origins to make requests
 app.use(bodyParser.json());
 app.use(express.static("public")); // serves index.html, script.js, etc.
 
-const GROQ_API_KEY = "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";
+const GROQ_API_KEY = "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";
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 app.get("/", (req, res) => {
