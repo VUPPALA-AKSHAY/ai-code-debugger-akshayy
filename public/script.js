@@ -47,8 +47,6 @@ const editor = CodeMirror(document.getElementById('editor-container'), {
 
 
 */
-
-
 const editor = CodeMirror(document.getElementById('editor-container'), {
   mode: 'javascript',
   theme: 'material',
@@ -69,7 +67,7 @@ document.getElementById('debug-btn').addEventListener('click', async () => {
 
   const apiUrl = window.location.hostname.includes("localhost")
     ? "http://localhost:8002/debug"
-    : "https://ai-code-debugger-akshayy-2326.onrender.com/";  // ✅ Updated here
+    : "https://ai-code-debugger-akshayy-2326.onrender.com/debug";  // Corrected here
 
   try {
     const response = await fetch(apiUrl, {
