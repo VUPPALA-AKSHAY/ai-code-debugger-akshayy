@@ -84,4 +84,4 @@ document.getElementById('debug-btn').addEventListener('click', async () => {
     document.getElementById('output').innerText = "Error reaching the server.";
     console.error(err);
   }
-});
+}); 
